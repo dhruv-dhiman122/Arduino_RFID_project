@@ -1,3 +1,4 @@
+#include <SPI.h>
 
 #define RSI_PIN 9
 #define SDA_PIN 10
@@ -11,6 +12,10 @@ void setup() {
     pinMode(SCK_PIN, OUTPUT);
     pinMode(SDA_PIN, OUTPUT);
     pinMode(RSI_PIN, INPUT);
+
+    SPI.begin();
+
+    Serial.begin(9600);
 }
 
 void loop() {
